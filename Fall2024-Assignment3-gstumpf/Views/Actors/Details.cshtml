@@ -1,0 +1,40 @@
+﻿@model Fall2024_Assignment3_gstumpf.Models.ActorViewModel
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<p>Gender: @Model.Gender</p>
+<p>Age: @Model.Age</p>
+<p><a href="@Model.IMDBLink" target="_blank">View on IMDB</a></p>
+<img src="@Model.Photo" alt="Actor Photo" />
+<hr>
+
+<h2>Movies</h2>
+<ul>
+    @foreach (var movie in Model.Movies)
+    {
+        <li>@movie.Title</li>
+    }
+</ul>
+
+<h2>AI-Generated Tweets</h2>
+<h3>@Model.OverallSentiment</h3>
+<table id="tweetsTable" class="table">
+    <thead>
+        <tr>
+            <th>Tweet</th>
+            <th>Sentiment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tweet in Model.Tweets)
+        {
+            <tr>
+                <td>@tweet.Text</td>
+                <td>@tweet.Sentiment</td>
+            </tr>
+        }
+    </tbody>
+</table>

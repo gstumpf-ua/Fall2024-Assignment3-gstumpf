@@ -1,0 +1,99 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fdfdfd;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 15px;
+}
+
+/* Movie Cards */
+.movie-card {
+    background: #89CFF0;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s;
+    color: #333333;
+    cursor: pointer;
+}
+
+    .movie-card:hover {
+        transform: scale(1.05);
+        background: #f0f0f0;
+    }
+
+/* Movie Title */
+.movie-title {
+    font-size: 1.8em;
+    color: #ff6f61;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Review Text */
+.review-text {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+    .button:hover {
+        background-color: #ff866c;
+        transform: scale(1.1);
+    }
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
