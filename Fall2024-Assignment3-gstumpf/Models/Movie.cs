@@ -25,7 +25,7 @@ namespace Fall2024_Assignment3_gstumpf.Models
         
 
 
-        public ICollection<MovieActor> MovieActors { get; set; } // Navigation property
+        public ICollection<MovieActor> MovieActors { get; set; } 
     }
 
 }

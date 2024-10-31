@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fall2024_Assignment3_gstumpf.Data;
 using Fall2024_Assignment3_gstumpf.Models;
-using Azure.AI.OpenAI; // Add this using statement for OpenAI
-using Microsoft.Extensions.Configuration; // Add this using statement for IConfiguration
+using Azure.AI.OpenAI; 
+using Microsoft.Extensions.Configuration; 
 using VaderSharp2;
-using System.ClientModel; // Add this using statement for VaderSharp2
+using System.ClientModel; 
 
 namespace Fall2024_Assignment3_gstumpf.Controllers
 {
@@ -23,15 +23,15 @@ namespace Fall2024_Assignment3_gstumpf.Controllers
         {
             _context = context;
 
-            // Fetching secrets from configuration
-            string openAiKey = configuration["OpenAI:ApiKey"];
-            string targetUri = configuration["TargetUri"];
+            //// Fetching secrets from configuration
+            //string openAiKey = configuration["OpenAI:ApiKey"];
+            //string targetUri = configuration["TargetUri"];
 
-            // Initialize AzureOpenAIClient with secrets
-            _openAiClient = new AzureOpenAIClient(
-                new Uri(targetUri),
-                new ApiKeyCredential(openAiKey)
-            );
+            //// Initialize AzureOpenAIClient with secrets
+            //_openAiClient = new AzureOpenAIClient(
+            //    new Uri(targetUri),
+            //    new ApiKeyCredential(openAiKey)
+            //);
         }
 
         // GET: Movies
@@ -241,7 +241,7 @@ namespace Fall2024_Assignment3_gstumpf.Controllers
 
         
 
-        // Helper method for sentiment analysis (uses VaderSharp2 or similar tool)
+        
         private double GetSentiment(string reviewText)
         {
             var analyzer = new SentimentIntensityAnalyzer();
